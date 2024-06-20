@@ -1,0 +1,35 @@
+/* Common styles for the profile page */
+.profile-info {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 70%; /* Increase this value to make the box wider */
+    width: 100%; /* Ensure the width is 100% of the max-width */
+    margin: 0 auto; /* Center the box */
+}
+
+/* Styles for the rows of stats in profile */
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    width: 48%; /* Adjust width for two columns */
+    margin-bottom: 10px;
+}
+
+/* Styles for the stat text and button */
+.stats-row p {
+    flex: 1;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.stats-row button {
+    margin-left: 10px;
+}

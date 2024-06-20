@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .nav-icon {
+            color: white;
+            font-size: 1.5em;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="tangerine">Quest History</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quests.html">View Quests</a></li>
+                <li><a href="add_quest.html">Add Quest</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="#" id="reset-button">Reset</a></li>
+                <li><a href="#" id="export-quests-button"><i class="fas fa-file-export nav-icon"></i></a></li>
+                <li><a href="#" id="import-quests-button"><i class="fas fa-file-import nav-icon"></i></a></li>
+                <input type="file" id="file-input" style="display:none;">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="history-container">
+            <div class="table-container">
+                <label for="status-select" class="metric-label">Select Status:</label>
+                <select id="status-select">
+                    <option value="all">All</option>
+                    <option value="completed">Completed</option>
+                    <option value="ongoing">Ongoing</option>
+                    <option value="failed">Failed</option>
+                </select>
+                <table id="quest-history-table">
+                    <thead>
+                        <tr>
+                            <th>Quest Name</th>
+                            <th>Type</th>
+                            <th>Status</th>
+                            <th>Difficulty</th>
+                            <th>XP Reward</th>
+                            <th>Stat Reward</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Quest history rows will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="chart-container">
+                <label for="metric-select" class="metric-label">Select Metric:</label>
+                <select id="metric-select">
+                    <option value="xp">XP</option>
+                    <option value="stat">Stat</option>
+                    <option value="count">Count</option>
+                </select>
+                <canvas id="progress-chart"></canvas>
+            </div>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

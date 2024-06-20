@@ -1,0 +1,30 @@
+const userData = {
+    username: 'testuser',
+    currentLevel: 1,
+    currentXP: 0,
+    nextLevelXP: 100,
+    allRounderStatPoints: 0,
+    stats: {
+        strength: 1.040,
+        intelligence: 1.130,
+        charm: 1.030,
+        agility: 0.980,
+        stamina: 0.990,
+        endurance: 1.010,
+        luck: 1.200
+    }
+};
+
+const sampleQuests = [
+    {
+        name: 'Do 500 pushups',
+        type: 'Physical',
+        description: 'Complete 500 pushups in one session.',
+        difficulty: 'Easy',
+        xpReward: 50,
+        statReward: { name: 'Strength', count: 1 },
+        startTime: new Date().toLocaleString(),
+        deadline: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000).toLocaleString(),
+        status: 'Ongoing'
+    }
+];

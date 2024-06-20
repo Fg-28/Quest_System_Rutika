@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Gothic A1', sans-serif;
+        }
+        .nav-icon {
+            color: white;
+            font-size: 1.5em;
+            padding: 0 10px;
+        }
+        .hidden {
+            display: none;
+        }
+        #dialogueBox {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 300px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+        }
+        .robotic-anime {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .content {
+            margin-top: 10px;
+        }
+        #userInput {
+            width: calc(100% - 60px);
+            padding: 5px;
+            margin-right: 10px;
+        }
+        #sendBtn {
+            padding: 5px 10px;
+        }
+        #responseArea {
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Quest Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quests.html">View Quests</a></li>
+                <li><a href="add_quest.html">Add Quest</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="#" id="reset-button">Reset</a></li>
+                <li><a href="#" id="export-quests-button"><i class="fas fa-file-export nav-icon"></i></a></li>
+                <li><a href="#" id="import-quests-button"><i class="fas fa-file-import nav-icon"></i></a></li>
+                <input type="file" id="file-input" style="display:none;">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="summary-and-chart">
+            <div class="user-summary">
+                <h2>Stats</h2>
+                <p>Level: <span id="profile-level"></span></p>
+                <p>XP: <span id="profile-xp"></span>/<span id="profile-xp-max"></span></p>
+                <div class="stats-row">
+                    <p>Strength: <span id="profile-strength"></span></p>
+                    <p>Intelligence: <span id="profile-intelligence"></span></p>
+                </div>
+                <div class="stats-row">
+                    <p>Agility: <span id="profile-agility"></span></p>
+                    <p>Stamina: <span id="profile-stamina"></span></p>
+                </div>
+                <div class="stats-row">
+                    <p>Charm: <span id="profile-charm"></span></p>
+                    <p>Endurance: <span id="profile-endurance"></span></p>
+                </div>
+                <div class="stats-row">
+                    <p>Luck: <span id="profile-luck"></span></p>
+                </div>
+                <p>Unallocated Stat Points: <span id="profile-all-rounder"></span></p>
+            </div>
+            <div class="radar-chart-container">
+                <canvas id="radar-chart" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </main>
+    <div id="dialogueBox" class="hidden">
+        <div class="header">
+            <img src="robotic-anime-style-picture.jpg" alt="Robotic Anime" class="robotic-anime">
+            <p>What can I help you with, Master?</p>
+        </div>
+        <div class="content">
+            <input type="text" id="userInput" placeholder="Type your question or request here...">
+            <button id="sendBtn">Send</button>
+        </div>
+        <div id="responseArea"></div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

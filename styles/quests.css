@@ -1,0 +1,31 @@
+/* quests.css */
+
+/* Quest container styles */
+.quest-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Quest card styles */
+.quest-card {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    padding: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.quest-card:hover {
+    transform: scale(1.05);
+}
+
+.quest-card h3 {
+    margin: 0 0 10px 0;
+}
+
+.quest-card p {
+    margin: 5px 0;
+}

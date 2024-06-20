@@ -1,0 +1,32 @@
+/* Add styles specific to home and chart elements */
+.summary-and-chart {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.user-summary {
+    width: 45%;
+    text-align: left;
+}
+
+.radar-chart-container {
+    width: 45%;
+}
+
+.recent-and-notifications {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    padding: 20px;
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.recent-activity, .notifications {
+    width: 45%;
+}

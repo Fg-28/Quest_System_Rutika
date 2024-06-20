@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .nav-icon {
+            color: white;
+            font-size: 1.5em;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="tangerine">User Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quests.html">View Quests</a></li>
+                <li><a href="add_quest.html">Add Quest</a></li>
+                <li><a href="profile.html">User Profile</a></li>
+                <li><a href="history.html">History</a></li>
+                <li><a href="#" id="reset-button">Reset</a></li>
+                <li><a href="#" id="export-quests-button"><i class="fas fa-file-export nav-icon"></i></a></li>
+                <li><a href="#" id="import-quests-button"><i class="fas fa-file-import nav-icon"></i></a></li>
+                <input type="file" id="file-input" style="display:none;">
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="profile-info">
+ 	    <h2 id="profile-username"></h2>
+            <p>Level: <span id="profile-level"></span></p>
+            <div class="xp-bar">
+                <div id="xp-bar-fill" class="xp-bar-fill"></div>
+            </div>
+            <p>Level: <span id="profile-level"></span></p>
+            <p>XP: <span id="profile-xp"></span>/<span id="profile-xp-max"></span></p>
+            <div class="stats-row">
+                <p>Strength: <span id="profile-strength"></span> <button onclick="allocateStat('strength')">+</button></p>
+                <p>Intelligence: <span id="profile-intelligence"></span> <button onclick="allocateStat('intelligence')">+</button></p>
+            </div>
+            <div class="stats-row">
+                <p>Agility: <span id="profile-agility"></span> <button onclick="allocateStat('agility')">+</button></p>
+                <p>Stamina: <span id="profile-stamina"></span> <button onclick="allocateStat('stamina')">+</button></p>
+            </div>
+            <div class="stats-row">
+                <p>Charm: <span id="profile-charm"></span> <button onclick="allocateStat('charm')">+</button></p>
+                <p>Endurance: <span id="profile-endurance"></span> <button onclick="allocateStat('endurance')">+</button></p>
+            </div>
+            <div class="stats-row">
+                <p>Luck: <span id="profile-luck"></span></p>
+            </div>
+            <p>Unallocated Stat Points: <span id="profile-all-rounder"></span></p>
+        </div>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
